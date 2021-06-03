@@ -1,5 +1,16 @@
 html, body {
   padding: 0;
   margin: 0;
-  text-align: center;
+  height: 100%;
+}
+
+.placeholder {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeholder img {
+  width: 300px;
 }
