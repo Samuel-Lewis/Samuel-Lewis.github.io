@@ -1,16 +1,44 @@
+:root {
+  --background: #F5FBEF;
+  --foreground: #131616;
+  --foreground-hover: #5F6D6D;
+}
+
 html, body {
   padding: 0;
   margin: 0;
   height: 100%;
+  
+  color: var(--foreground);
+  background-color: var(--background);
 }
 
-.placeholder {
-  height: 100%;
+body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  min-height: 100vh;
 }
 
-.placeholder img {
-  width: 300px;
+.cat {
+  width: 150px;
+  mix-blend-mode: multiply;
+  padding: 20px;
+}
+
+.socials a {
+  text-decoration: none;
+  padding: 10px;
+}
+
+.socials svg {
+  fill: var(--foreground);
+  width: 24px;
+  height: 24px;
+}
+
+.socials svg:hover {
+  fill: var(--foreground-hover);
 }
