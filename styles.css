@@ -2,7 +2,8 @@
   --microtip-transition-duration: 0.1s;
   --microtip-font-size: 12px;
   --color-black: #101010;
-  --color-white: #e8e8e8;
+  --color-white: #e5e7da;
+  --color-fg: #fff7d1;
 }
 
 html,
@@ -10,40 +11,61 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-fg);
+}
+
+.cover-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.cover {
+  background-color: var(--color-fg);
+}
+
+.cat {
+  mix-blend-mode: multiply;
+  max-width: 150px;
+}
+
+.cat img {
+}
+
+.content {
+  position: relative;
+  margin-top: calc(100vh - 200px);
 }
 
 .split {
-  height: 100%;
+  height: 400px;
   width: 50%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
+  box-shadow: inset 0 10px 20px -10px var(--color-black);
 }
 
 .left {
-  left: 0;
+  float: left;
   background-color: var(--color-white);
   color: var(--color-black);
 }
 
-/* Control the right side */
 .right {
-  right: 0;
+  float: right;
   background-color: var(--color-black);
   color: var(--color-white);
 }
 
-.centred {
-  position: absolute;
+.centered {
+  position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
+  transform: translate(-50%, -50%);
 }
 
-.centred img {
+.split img {
   width: 120px;
   aspect-ratio: 1/1;
 }
