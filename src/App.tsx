@@ -15,11 +15,12 @@ function App() {
 
   const sceneLayers = layerConfig.map((layer, i) => (
     <ParallaxLayer
-      key={layer.src}
-      speed={layer.speed}
+      key={layer}
+      speed={i * 0.1}
       offset={0}
+      factor={1}
       style={{
-        backgroundImage: `url(${layer.src})`,
+        backgroundImage: `url(${layer})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
@@ -40,7 +41,11 @@ function App() {
 
   return (
     <ThemeProvider>
-      <Parallax pages={2} ref={ref}>
+      <Parallax
+        pages={2}
+        ref={ref}
+        config={{ mass: 1, tension: 300, friction: 40 }}
+      >
         <ParallaxLayer sticky={{ start: 0, end: 0.5 }}>
           <Anchor
             p="md"
