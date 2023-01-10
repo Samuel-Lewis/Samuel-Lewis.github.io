@@ -7,6 +7,7 @@ export const App: React.FC = () => {
   return (
     <ThemeProvider
       themeOverride={{
+        colorScheme: 'dark',
         colors: {
           night: [
             '#E5F0F6',
