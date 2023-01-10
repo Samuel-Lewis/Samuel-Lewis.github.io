@@ -26,7 +26,7 @@ export interface ParallaxBackgroundProps {
 
 const useStyles = createStyles(() => ({
   layer: {
-    backgroundSize: 'auto 100vh !important',
+    backgroundSize: 'cover !important',
     backgroundPosition: 'center',
     zIndex: -1,
   },
@@ -56,11 +56,7 @@ export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
   }, [ref]);
 
   return (
-    <Parallax
-      pages={2}
-      ref={ref}
-      config={{ mass: 1, tension: 300, friction: 40 }}
-    >
+    <Parallax pages={2} ref={ref} config={{ mass: 1, friction: 0, tension: 0 }}>
       <ParallaxLayer sticky={{ start: 0, end: 0.5 }}>
         <Button m="xs" onClick={jumpTo} color="night.8">
           Jump to content
