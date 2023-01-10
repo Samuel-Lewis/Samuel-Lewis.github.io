@@ -1,46 +1,35 @@
-import {
-  Center,
-  Title,
-  Image,
-  Stack,
-  Text,
-  Group,
-  ActionIcon,
-  Tooltip,
-} from '@mantine/core';
 import React from 'react';
+
+import { Center, Title, Image, Stack, Text, Button } from '@mantine/core';
+import { IconBrandGithub } from '@tabler/icons';
+
 import AvatarImage from './avatar.svg';
-import { IoLogoGithub } from 'react-icons/io5';
 
 export const Body: React.FC = () => {
-  const links = [
-    {
-      label: 'GitHub',
-      link: 'https://github.com/Samuel-Lewis',
-      icon: <IoLogoGithub size={32} />,
-    },
-  ].map((l) => (
-    <Tooltip label={l.label} key={l.label} position="bottom">
-      <ActionIcon
-        component="a"
-        href={l.link}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {l.icon}
-      </ActionIcon>
-    </Tooltip>
-  ));
-
   return (
-    <Center m="xl" style={{ height: '100%' }}>
+    <Center
+      sx={(theme) => ({
+        height: '100%',
+        backgroundColor: theme.colors.night[9],
+      })}
+    >
       <Stack align="center">
         <Image width={100} src={AvatarImage} />
         <Title>Hi there.</Title>
         <Text>
-          I'm a Frontend Software Engineer living and working in Australia.
+          I am a Frontend Software Engineer living and working in Australia.
         </Text>
-        <Group>{links}</Group>
+        <Button
+          leftIcon={<IconBrandGithub />}
+          component="a"
+          href="https://github.com/Samuel-Lewis"
+          target="_blank"
+          rel="noopener noreferrer"
+          color="night.4"
+          variant="subtle"
+        >
+          GitHub
+        </Button>
       </Stack>
     </Center>
   );

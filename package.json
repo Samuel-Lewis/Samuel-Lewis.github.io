@@ -12,18 +12,20 @@
   },
   "dependencies": {
     "@emotion/react": "^11.10.0",
-    "@mantine/core": "^5.2.0",
-    "@mantine/hooks": "^5.2.0",
-    "@react-spring/parallax": "^9.5.2",
+    "@mantine/core": "^5.10.0",
+    "@mantine/hooks": "^5.10.0",
+    "@react-spring/parallax": "^9.6.1",
+    "@samuel-lewis/components": "^0.0.5",
+    "@tabler/icons": "^1.119.0",
+    "eslint-config-samuel-lewis": "^0.0.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.4.0"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.1",
-    "eslint": "^8.22.0",
+    "eslint": "^8.31.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
