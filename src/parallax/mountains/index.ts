@@ -1,0 +1,9 @@
+export { default as Foreground2 } from './00_foreground2.svg';
+export { default as Foreground1 } from './01_foreground1.svg';
+export { default as Lake } from './02_lake.svg';
+export { default as Grass } from './03_grass.svg';
+export { default as Mountains } from './04_mountains.svg';
+export { default as Clouds1 } from './05_clouds1.svg';
+export { default as Clouds2 } from './06_clouds2.svg';
+export { default as Sky } from './07_sky.svg';
+export { default as Comet } from './08_comet.svg';
