@@ -25,7 +25,6 @@ export const Body: React.FC = () => {
           href="https://github.com/Samuel-Lewis"
           target="_blank"
           rel="noopener noreferrer"
-          color="night.4"
           variant="subtle"
         >
           GitHub

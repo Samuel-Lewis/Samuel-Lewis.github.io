@@ -1,7 +1,9 @@
+import { ParallaxLayer } from '@react-spring/parallax';
 import { ThemeProvider } from '@samuel-lewis/components';
 
 import { Body } from './body';
 import { ParallaxBackground } from './parallax';
+import { Projects } from './projects/Projects';
 
 export const App: React.FC = () => {
   return (
@@ -22,10 +24,25 @@ export const App: React.FC = () => {
             '#001E29',
           ],
         },
+
+        globalStyles: (theme) => ({
+          a: {
+            color: 'inherit',
+            textDecorationColor: theme.fn.rgba(theme.colors.dark[1], 0.6),
+            ':hover': {
+              textDecorationColor: theme.colors.dark[1],
+            },
+          },
+        }),
       }}
     >
       <ParallaxBackground>
-        <Body />
+        <ParallaxLayer offset={1}>
+          <Body />
+        </ParallaxLayer>
+        <ParallaxLayer offset={1.8} factor={10}>
+          <Projects />
+        </ParallaxLayer>
       </ParallaxBackground>
     </ThemeProvider>
   );

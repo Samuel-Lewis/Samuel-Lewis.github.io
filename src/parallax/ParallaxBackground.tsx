@@ -19,28 +19,19 @@ export interface ParallaxBackgroundProps {
   children?: React.ReactNode;
 }
 
-// const cloudMovement = keyframes({
-//   '0%': { backgroundPosition: '0% 0' },
-//   '100%': { backgroundPosition: '-100% 0' },
-// });
-
-const useStyles = createStyles(() => ({
+const useStyles = createStyles((theme) => ({
   layer: {
     backgroundSize: 'cover !important',
     backgroundPosition: 'center',
     zIndex: -1,
   },
 
-  // cloudSlow: {
-  //   animation: `${cloudMovement} 5s linear infinite`,
-  // },
-
-  // cloudFast: {
-  //   animation: `${cloudMovement} 2s linear infinite`,
-  // },
-
   bottom: {
     backgroundPosition: 'bottom',
+  },
+
+  bg: {
+    backgroundColor: theme.colors.night[9],
   },
 }));
 
@@ -56,7 +47,12 @@ export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
   }, [ref]);
 
   return (
-    <Parallax pages={2} ref={ref} config={{ mass: 1, friction: 0, tension: 0 }}>
+    <Parallax
+      pages={6}
+      ref={ref}
+      config={{ mass: 1, friction: 0, tension: 0 }}
+      className={classes.bg}
+    >
       <ParallaxLayer sticky={{ start: 0, end: 0.5 }}>
         <Button m="xs" onClick={jumpTo} color="night.8">
           Jump to content
@@ -105,7 +101,7 @@ export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
         className={cx(classes.layer, classes.bottom)}
         style={{ backgroundImage: `url(${Foreground2})` }}
       />
-      <ParallaxLayer offset={1}>{children}</ParallaxLayer>
+      {children}
     </Parallax>
   );
 };
