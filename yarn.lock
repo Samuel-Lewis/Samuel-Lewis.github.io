@@ -662,10 +662,10 @@
     "@react-spring/shared" "~9.6.1"
     "@react-spring/types" "~9.6.1"
 
-"@samuel-lewis/components@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@samuel-lewis/components/-/components-0.4.0.tgz#c981bca6a4bb40f8fad950307ceff97d999c7527"
-  integrity sha512-wgylfkf107YTzcXP4wQNUebkaLeOMCaVwoXC7d3zmM5v/PtzxiyD/S6RMLk7ZMmbGa1I6RggBZHGkDUl5XJalg==
+"@samuel-lewis/components@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@samuel-lewis/components/-/components-0.0.5.tgz#c119c2cff91404016b345c9fa871e972e328efd8"
+  integrity sha512-cq/ZMCp6TqK0YGhLIu1+Rg2gDhITe3+lyyBTre3y7XNjlatLl7kMxQwki58kguc0L/6S3lnMh0V9jkFMX/iCMA==
   dependencies:
     prop-types "^15.8.1"
 
