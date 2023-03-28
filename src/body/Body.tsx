@@ -10,7 +10,11 @@ export const Body: React.FC = () => {
     <Center
       sx={(theme) => ({
         height: '100%',
-        backgroundColor: theme.colors.night[9],
+        backgroundImage: theme.fn.gradient({
+          from: theme.colors.night[9],
+          to: '#000a0e',
+          deg: 180,
+        }),
       })}
     >
       <Stack align="center">

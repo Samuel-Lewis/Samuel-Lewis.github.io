@@ -19,7 +19,7 @@ export interface ParallaxBackgroundProps {
   children?: React.ReactNode;
 }
 
-const useStyles = createStyles((theme) => ({
+const useStyles = createStyles(() => ({
   layer: {
     backgroundSize: 'cover !important',
     backgroundPosition: 'center',
@@ -31,7 +31,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   bg: {
-    backgroundColor: theme.colors.night[9],
+    backgroundColor: '#000a0e',
   },
 }));
 

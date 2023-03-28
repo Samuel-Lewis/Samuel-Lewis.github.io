@@ -183,6 +183,7 @@ export const Projects: React.FC = () => {
     <Stack m="xl">
       <Divider size="md" mt="xl" label={<Title>Projects</Title>} />
       {p}
+      <Text color="dimmed">More coming soon...</Text>
     </Stack>
   );
 };

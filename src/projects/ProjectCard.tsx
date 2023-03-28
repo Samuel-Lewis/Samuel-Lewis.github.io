@@ -14,8 +14,11 @@ export interface ProjectCardProps {
 
 const useStyles = createStyles((theme) => ({
   card: {
-    // backgroundColor: theme.fn.lighten('#65c9ff', 0.05),
-    backgroundColor: theme.fn.rgba('#65c9ff', 0.15),
+    backgroundImage: theme.fn.gradient({
+      from: theme.fn.rgba('#1e7eba', 0.5),
+      to: theme.fn.rgba('#045a8b', 0.5),
+      deg: 45,
+    }),
     maxHeight: 350,
     color: 'white',
   },
@@ -50,7 +53,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
     <Card shadow="sm" className={classes.card}>
       <Grid>
         <Grid.Col span={6}>
-          <Stack>
+          <Stack spacing="sm">
             <Title order={3}>
               <a href={href} target="_blank" rel="noopener noreferrer">
                 {title}
