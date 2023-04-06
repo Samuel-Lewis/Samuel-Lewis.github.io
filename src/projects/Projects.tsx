@@ -1,6 +1,6 @@
 import React, { AnchorHTMLAttributes } from 'react';
 
-import { Stack, Title, Text, Divider } from '@mantine/core';
+import { Stack, Title, Text, Divider, Center } from '@mantine/core';
 
 import { ProjectCard } from './ProjectCard';
 
@@ -180,10 +180,16 @@ export const Projects: React.FC = () => {
     ));
 
   return (
-    <Stack m="xl">
-      <Divider size="md" mt="xl" label={<Title>Projects</Title>} />
-      {p}
-      <Text color="dimmed">More coming soon...</Text>
-    </Stack>
+    <Center>
+      <Stack mx={32} align="center" sx={{ maxWidth: 920 }}>
+        <Divider
+          size="md"
+          label={<Title>Projects</Title>}
+          sx={{ width: '100%' }}
+        />
+        {p}
+        <Text color="dimmed">More coming soon...</Text>
+      </Stack>
+    </Center>
   );
 };

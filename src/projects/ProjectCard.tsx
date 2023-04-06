@@ -15,8 +15,8 @@ export interface ProjectCardProps {
 const useStyles = createStyles((theme) => ({
   card: {
     backgroundImage: theme.fn.gradient({
-      from: theme.fn.rgba('#1e7eba', 0.5),
-      to: theme.fn.rgba('#045a8b', 0.5),
+      from: theme.fn.rgba('#1e7eba', 0.8),
+      to: theme.fn.rgba('#8bbdd8', 0.8),
       deg: 45,
     }),
     maxHeight: 350,
@@ -52,7 +52,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <Card shadow="sm" className={classes.card}>
       <Grid>
-        <Grid.Col span={6}>
+        <Grid.Col xs={12} sm={6}>
           <Stack spacing="sm">
             <Title order={3}>
               <a href={href} target="_blank" rel="noopener noreferrer">
@@ -60,27 +60,20 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               </a>
             </Title>
             {year && (
-              <Text color="dimmed">
+              <Text sx={{ opacity: 0.7 }}>
                 <b>{year}</b> {tags.length > 0 && `| ${tags.join(' | ')}`}
               </Text>
             )}
             {children}
             {contributor && (
-              <Text color="dimmed" italic>
+              <Text sx={{ opacity: 0.7 }} italic>
                 Major contributor to this project
               </Text>
             )}
           </Stack>
         </Grid.Col>
-        <Grid.Col span={6}>
-          <img
-            className={classes.image}
-            src={
-              imgSrc ??
-              'https://images.unsplash.com/photo-1679770884293-a4f41b5f05cd'
-            }
-            alt={title}
-          />
+        <Grid.Col xs={12} sm={6}>
+          <img className={classes.image} src={imgSrc ?? ''} alt={title} />
         </Grid.Col>
       </Grid>
     </Card>
