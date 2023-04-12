@@ -23,6 +23,8 @@ const useStyles = createStyles(() => ({
   layer: {
     backgroundSize: 'cover !important',
     backgroundPosition: 'center',
+    position: 'sticky',
+    top: 0,
     zIndex: -1,
   },
 
@@ -53,7 +55,7 @@ export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
       config={{ mass: 1, friction: 0, tension: 0 }}
       className={classes.bg}
     >
-      <ParallaxLayer sticky={{ start: 0, end: 0.5 }}>
+      <ParallaxLayer>
         <Button m="xs" onClick={jumpTo} color="night.8">
           Jump to content
         </Button>
