@@ -48,7 +48,7 @@ export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
 
   return (
     <Parallax
-      pages={6}
+      pages={2 + 5}
       ref={ref}
       config={{ mass: 1, friction: 0, tension: 0 }}
       className={classes.bg}

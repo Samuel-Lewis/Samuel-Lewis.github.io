@@ -1,11 +1,23 @@
 import React from 'react';
 
-import { Card, createStyles, Grid, Stack, Title, Text } from '@mantine/core';
+import {
+  Card,
+  createStyles,
+  Grid,
+  Stack,
+  Title,
+  Text,
+  Button,
+  Group,
+} from '@mantine/core';
 
 export interface ProjectCardProps {
   title: string;
-  href: string;
   imgSrc?: string;
+  links: {
+    github?: string;
+    live?: string;
+  };
   children?: React.ReactNode;
   year: number;
   tags?: string[];
@@ -19,7 +31,6 @@ const useStyles = createStyles((theme) => ({
       to: theme.fn.rgba('#8bbdd8', 0.8),
       deg: 45,
     }),
-    maxHeight: 350,
     color: 'white',
   },
 
@@ -28,7 +39,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   image: {
-    width: '100%',
+    height: 300,
     objectFit: 'cover',
     aspectRatio: '16/9',
     objectPosition: 'top',
@@ -41,21 +52,26 @@ const useStyles = createStyles((theme) => ({
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
-  href,
   imgSrc,
   children,
+  links,
   year,
   tags = [],
   contributor = false,
 }) => {
   const { classes } = useStyles();
+  const ghLink = `https://github.com/${links.github}`;
   return (
     <Card shadow="sm" className={classes.card}>
       <Grid>
         <Grid.Col xs={12} sm={6}>
           <Stack spacing="sm">
             <Title order={3}>
-              <a href={href} target="_blank" rel="noopener noreferrer">
+              <a
+                href={links.live ?? ghLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {title}
               </a>
             </Title>
@@ -70,10 +86,40 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                 Major contributor to this project
               </Text>
             )}
+            <Group spacing={0}>
+              {links.live && (
+                <Button
+                  href={links.live}
+                  component="a"
+                  variant="subtle"
+                  color="gray"
+                  size="sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View live
+                </Button>
+              )}
+              {links.github && (
+                <Button
+                  href={ghLink}
+                  component="a"
+                  variant="subtle"
+                  color="gray"
+                  size="sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View on GitHub
+                </Button>
+              )}
+            </Group>
           </Stack>
         </Grid.Col>
         <Grid.Col xs={12} sm={6}>
-          <img className={classes.image} src={imgSrc ?? ''} alt={title} />
+          {imgSrc && (
+            <img className={classes.image} src={imgSrc ?? ''} alt={title} />
+          )}
         </Grid.Col>
       </Grid>
     </Card>

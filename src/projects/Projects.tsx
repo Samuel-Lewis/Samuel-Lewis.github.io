@@ -16,10 +16,13 @@ const A: React.FC<AnchorHTMLAttributes<HTMLAnchorElement>> = ({
 const projects = [
   {
     title: 'Party Packrat',
-    href: 'https://party-packrat.vercel.app/',
     imgSrc: '/project-images/party-packrat.png',
     tags: ['NextJS', 'Firebase', 'Typescript'],
     year: 2023,
+    links: {
+      github: 'samuel-lewis/party-packrat',
+      live: 'https://party-packrat.vercel.app/',
+    },
     description: (
       <Text>
         A lightweight web app used to track inventories for your tabletop RPG
@@ -32,10 +35,13 @@ const projects = [
   },
   {
     title: '@samuel-lewis Design System',
-    href: 'https://github.com/Samuel-Lewis/design-system',
     imgSrc: '/project-images/design-system.png',
     tags: ['React', 'Monorepo', 'Design System'],
     year: 2023,
+    links: {
+      github: 'samuel-lewis/design-system',
+      live: 'https://www.npmjs.com/package/@samuel-lewis/components',
+    },
     description: (
       <Text>
         A collection of published packages used across my projects. Includes
@@ -48,9 +54,12 @@ const projects = [
   },
   {
     title: 'Over9',
-    href: 'https://samuel-lewis.com/over9/',
     imgSrc: '/project-images/over9.png',
     year: 2022,
+    links: {
+      github: 'samuel-lewis/over9',
+      live: 'https://samuel-lewis.com/over9/',
+    },
     description: (
       <Text>
         A fun project to collate and rank movies, games, (and more coming) that
@@ -60,10 +69,13 @@ const projects = [
   },
   {
     title: 'Iron Assembly',
-    href: 'https://ironassembly.com/',
     imgSrc: '/project-images/iron-assembly.png',
     year: 2021,
     tags: ['React', 'Typescript'],
+    links: {
+      github: 'samuel-lewis/iron-assembly',
+      live: 'https://ironassembly.com/',
+    },
     description: (
       <Text>
         A content aggregation website for an online community of content
@@ -74,9 +86,12 @@ const projects = [
   },
   {
     title: 'MC Status',
-    href: 'https://samuel-lewis.com/mc-status/',
     imgSrc: '/project-images/mc-status.png',
     year: 2021,
+    links: {
+      github: 'samuel-lewis/mc-status',
+      live: 'https://samuel-lewis.com/mc-status/',
+    },
     description: (
       <Text>
         Lightweight web app for status checking game servers and getting current
@@ -87,10 +102,13 @@ const projects = [
   },
   {
     title: 'Snake Tron',
-    href: 'https://samuel-lewis.com/snake-tron',
     imgSrc: '/project-images/snake-tron.png',
     year: 2021,
     tags: ['Simulation', 'AI', 'Code Fights'],
+    links: {
+      github: 'samuel-lewis/snake-tron',
+      live: 'https://samuel-lewis.com/snake-tron',
+    },
     description: (
       <Text>
         Snake Tron is a platform for developers to design and develop
@@ -108,10 +126,12 @@ const projects = [
   },
   {
     title: 'Minecraft Build Visualiser',
-    href: 'https://github.com/Samuel-Lewis/minecraft-builder',
     imgSrc: '/project-images/minecraft-builder.png',
     year: 2022,
     tags: ['Procedural animation', 'Python'],
+    links: {
+      github: 'samuel-lewis/minecraft-builder',
+    },
     description: (
       <Text>
         A procedual animation generator. Takes a chunk/schematic from a{' '}
@@ -125,9 +145,13 @@ const projects = [
   },
   {
     title: 'Password Custard',
-    href: 'https://samuel-lewis.github.io/password-custard/',
+    href: '',
     imgSrc: '/project-images/password-custard.png',
     year: 2021,
+    links: {
+      github: 'samuel-lewis/password-custard',
+      live: 'https://samuel-lewis.com/password-custard',
+    },
     description: (
       <Text>
         Password generator web app, using memorable, long-form phrase
@@ -139,10 +163,12 @@ const projects = [
   },
   {
     title: 'Godot Logger',
-    href: 'https://github.com/Samuel-Lewis/godot-logger',
     imgSrc: '/project-images/godot-logger.png',
     year: 2020,
     tags: ['Godot', 'GDScript', 'Tooling'],
+    links: {
+      github: 'samuel-lewis/godot-logger',
+    },
     description: (
       <Text>
         A generic logging library for the{' '}
@@ -154,10 +180,12 @@ const projects = [
   },
   {
     title: 'Modsmith',
-    href: 'https://github.com/nickrobson/modsmith',
     imgSrc: '/project-images/modsmith.png',
     year: 2022,
     tags: ['Desktop App', 'Tauri'],
+    links: {
+      github: 'nickrobson/modsmith',
+    },
     description: (
       <Text>
         A desktop app <A href="https://minecraft.net">Minecraft</A> modpack
